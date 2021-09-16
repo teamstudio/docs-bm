@@ -1,0 +1,1127 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.3">
+    
+    
+      
+        <title>Run Agent - Teamstudio Build Manager 9.0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#run-agent" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Teamstudio Build Manager 9.0" class="md-header__button md-logo" aria-label="Teamstudio Build Manager 9.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Teamstudio Build Manager 9.0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Run Agent
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Teamstudio Build Manager 9.0" class="md-nav__button md-logo" aria-label="Teamstudio Build Manager 9.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Teamstudio Build Manager 9.0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Installation and Setup
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installation and Setup" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Installation and Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installdb/" class="md-nav__link">
+        Configuration Database
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installplugin/" class="md-nav__link">
+        Status Plugin
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installtr/" class="md-nav__link">
+        Template Registry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installwa/" class="md-nav__link">
+        Workflow Approvals
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Stored Resources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Stored Resources" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Stored Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../srintro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../srpaths/" class="md-nav__link">
+        Standard Paths
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sraclentry/" class="md-nav__link">
+        Stored ACL Entry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sracl/" class="md-nav__link">
+        Stored ACLs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../srids/" class="md-nav__link">
+        Stored IDs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../srnetwork/" class="md-nav__link">
+        Stored Network Shares
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../srserver/" class="md-nav__link">
+        Stored Servers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../srtr/" class="md-nav__link">
+        Template Registries
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Promotion Paths
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Promotion Paths" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Promotion Paths
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../promotion/" class="md-nav__link">
+        Promotion Paths
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ppcreate/" class="md-nav__link">
+        Creating a Promotion Path
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bpcreate/" class="md-nav__link">
+        Creating a Build Path
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projectbuild/" class="md-nav__link">
+        Project Builds
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ciaoconfig/" class="md-nav__link">
+        Understanding CIAO Config Information
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tracking/" class="md-nav__link">
+        Tracking Deployments
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automating/" class="md-nav__link">
+        Automating Promotions
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Build Steps
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Build Steps" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Build Steps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buildsteps/" class="md-nav__link">
+        Build Steps
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acl/" class="md-nav__link">
+        ACL and ACL Entries
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../approval/" class="md-nav__link">
+        Approvals Step
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compile/" class="md-nav__link">
+        Compile LotusScript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testdata/" class="md-nav__link">
+        Create Test Data
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customstep/" class="md-nav__link">
+        Custom Steps
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dbcopy/" class="md-nav__link">
+        Database Copy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dbprops/" class="md-nav__link">
+        Database Properties
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audit/" class="md-nav__link">
+        Design Audit
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elemprops/" class="md-nav__link">
+        Element Properties
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../email/" class="md-nav__link">
+        Email Notification
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enableagents/" class="md-nav__link">
+        Enabling Scheduled Agents
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version/" class="md-nav__link">
+        Make Version with CIAO
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modify/" class="md-nav__link">
+        Modify-Only Builds
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../refresh/" class="md-nav__link">
+        Refresh/Replace Design
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Run Agent
+      </a>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../runcommand/" class="md-nav__link">
+        Run Command
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../star/" class="md-nav__link">
+        Search and Replace
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../console/" class="md-nav__link">
+        Send Console Command
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../behalf/" class="md-nav__link">
+        Set Agent On Behalf Of
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agentserver/" class="md-nav__link">
+        Set Agent Server
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signdb/" class="md-nav__link">
+        Sign Database or Template
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../switchid/" class="md-nav__link">
+        Switch ID
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Troubleshooting
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Troubleshooting" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Troubleshooting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        Common Error Messages
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release/" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="run-agent">Run Agent</h1>
+<p>Run an agent.</p>
+<h1 id="to-run-an-agent">To Run an Agent</h1>
+<ol>
+<li>Select the database document for which you want to run an agent.</li>
+<li>Click the <em>Create</em> action button and select <em>Run Agent</em>. The <em>Run Agent</em> document appears
+   <img alt="Run Agent" src="../img/runagent.png" /></li>
+<li>The Run Agent document is active by default. Leave this setting.</li>
+<li>Enter a descriptive name in the <em>Description</em> field (for example, Run Agent).</li>
+<li>Click <em>Browse</em> to select the database containing the agent that you want to run.</li>
+<li>Click <em>Get Agents</em> to populate the Agent Name dropdown.</li>
+<li>Select an agent.</li>
+<li>If you want to fail the promotion if the selected agent fails to run, check the <em>Promotion Fails if the agent cannot be initialized</em> checkbox.</li>
+</ol>
+<p>The following steps require you to perform additional setup detailed in a separate procedure and require the inclusion of additional LotusScript libraries and code modifications. See “Using the Advanced Features of Run Agent,” below.</p>
+<ol>
+<li>If you want to pass parameters to an agent or check its status after it runs, check the <em>Enable additional options using agent parameter database</em> checkbox in the <em>Advanced Options</em> section.</li>
+<li>The following advanced options appear.<ul>
+<li>Get agent status from parameter database after agent runs</li>
+<li>Include messages from the agent in the promotion log</li>
+<li>Pass parameters to agent</li>
+</ul>
+</li>
+<li>If you want, check the <em>Get agent status from parameter database after agent runs</em>.</li>
+<li>Check <em>Fail promotion if the agent does not confirm success</em> if you want the database promotion to fail if the agent does not run to completion.</li>
+<li>If you want, check the <em>Include messages from the agent in the promotion log</em> checkbox</li>
+<li>If you have parameters you want to pass to the agent, check the <em>Pass parameters to agent</em> checkbox.</li>
+</ol>
+<p>Save and close the document.</p>
+<p>The new Run Agent entry appears in the right pane, under the database to which it applies. Note: Build Manager calls the agent you specify with Run Agent using the NotesAgent.RunOnServer() method in LotusScript.</p>
+<figure>
+<p><img alt="Run Agent in View" src="../img/runagent2.png" /></p>
+</figure>
+<h2 id="using-the-advanced-features-of-runagent">Using the Advanced Features of RunAgent</h2>
+<p>Use the following two-part procedure to set up Build Manager to use the advanced features of Run Agent, including passing parameters to the agent, logging messages from agent, and confirming successful completion of an agent.</p>
+<p>Part One: set up the database and signers on the target server.</p>
+<ol>
+<li>Make sure AgentParameters.nsf is saved in the Teamstudio directory of the target server (the server where the database containing the agent is located).</li>
+<li>Make sure the ID promoting the database in Build Manager has Editors rights for AgentParameters.nsf.</li>
+<li>Make sure the signer of the target agent has Editor rights for AgentParameters.nsf. </li>
+</ol>
+<p>Part Two:</p>
+<ol>
+<li>Include the TSAgentParameters library and code to call it.</li>
+<li>Copy the TSAgentParameters script library from AgentParameters.nsf.</li>
+<li>Use your custom code to call the methods exposed by the global object</li>
+</ol>
+<p>Include the library in the options section
+<div class="highlight"><pre><span></span><code><span class="k">Option</span> <span class="k">Public</span>
+<span class="k">Option</span> <span class="k">Declare</span>
+<span class="n">Use</span> <span class="s">&quot;TSAgentParameters&quot;</span>
+</code></pre></div></p>
+<p>Check that the TSAgentParameter object was created. Build Manager always passes NoteID. If you call the agent without this parameter, no object is created.
+<div class="highlight"><pre><span></span><code><span class="k">Sub</span> <span class="nf">Initialize</span>
+  <span class="k">If</span> <span class="k">Not</span> <span class="n">TSAgentParemeters</span> <span class="ow">Is</span> <span class="k">Nothing</span> <span class="k">Then</span>
+    <span class="c">&#39;a ParameterDocID was found and the global instance of TSAgentParameters was loaded...</span>
+</code></pre></div>
+Check if it registered an error, for example if it couldn’t find the document or the parameter db.
+<div class="highlight"><pre><span></span><code><span class="k">If</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">ErrorNumber</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span> <span class="c">&#39;test to see if it had errors</span>
+  <span class="k">Error</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">ErrorNumber</span><span class="p">,</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">ErrorMsg</span>
+<span class="k">End</span> <span class="k">If</span>
+</code></pre></div></p>
+<p>Get a single parameter by name.
+<div class="highlight"><pre><span></span><code><span class="k">Dim</span> <span class="n">sResult</span> <span class="ow">As</span> <span class="kt">String</span>
+<span class="n">sResult</span> <span class="o">=</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">getParameterValue</span><span class="p">(</span><span class="s">&quot;aStringParam&quot;</span><span class="p">)(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Get all parameter names as an array.
+<div class="highlight"><pre><span></span><code><span class="k">Dim</span> <span class="n">paramNames</span> <span class="ow">As</span> <span class="kt">Variant</span><span class="p">,</span> <span class="n">i</span> <span class="ow">As</span> <span class="kt">Integer</span>
+<span class="n">paramNames</span> <span class="o">=</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">getParameterNames</span><span class="p">()</span>
+</code></pre></div></p>
+<p>Log a message to the parameter DB.
+<div class="highlight"><pre><span></span><code><span class="k">Call</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">logMessage</span><span class="p">(</span><span class="s">&quot;Successfully updated configuration document.&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>Mark status complete. This is what lets Build Manager know if the agent completed successfully.
+<div class="highlight"><pre><span></span><code><span class="k">Call</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">markComplete</span><span class="p">()</span>
+</code></pre></div></p>
+<p>Get all parameters in a LotusScript list variable
+<div class="highlight"><pre><span></span><code><span class="k">Call</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">getParameterList</span><span class="p">(</span><span class="n">vParamList</span><span class="p">)</span> <span class="c">&#39;pass in the list to be populated with values</span>
+<span class="n">Forall</span> <span class="n">param</span> <span class="ow">In</span> <span class="n">vParamList</span> <span class="c">&#39;convert the list into name-value pairs</span>
+  <span class="n">sPairs</span> <span class="o">=</span> <span class="n">sPairs</span> <span class="o">&amp;</span> <span class="n">Listtag</span><span class="p">(</span><span class="n">param</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s">&quot; = &quot;</span> <span class="o">&amp;</span> <span class="n">param</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span> <span class="c">&#39;(assumes no multi-values)</span>
+<span class="k">End</span> <span class="n">Forall</span>
+</code></pre></div>
+A complete example.
+<div class="highlight"><pre><span></span><code><span class="k">Sub</span> <span class="nf">Initialize</span>
+  <span class="k">If</span> <span class="n">TSAgentParameters</span> <span class="ow">Is</span> <span class="k">Nothing</span> <span class="k">Then</span>
+    <span class="c">&#39;no note id was received form NotesAgnet.ParameterDocID</span>
+    <span class="c">&#39;(the agent was called with run() w/o note id, or via UI, etc)</span>
+    <span class="c">&#39;do nothing, throw errors, or do alternate processing</span>
+  <span class="k">Else</span>
+    <span class="k">If</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">ErrorNumber</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="k">Then</span>
+      <span class="k">Error</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">ErrorNumber</span><span class="p">,</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">ErrorMsg</span>
+    <span class="k">End</span> <span class="k">If</span>
+
+    <span class="k">Dim</span> <span class="n">s</span> <span class="ow">As</span> <span class="k">New</span> <span class="n">NotesSession</span>
+    <span class="k">Dim</span> <span class="n">db</span> <span class="ow">as</span> <span class="n">NotesDatabase</span>
+    <span class="k">Set</span> <span class="n">db</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">CurrentDatabase</span>
+    <span class="n">Dom</span> <span class="n">doc</span> <span class="ow">As</span> <span class="n">NotesDocument</span>
+    <span class="k">Set</span> <span class="n">doc</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="n">GetView</span><span class="p">(</span><span class="s">&quot;(configuration)&quot;</span><span class="p">).</span><span class="n">GetFirstDocument</span><span class="p">()</span>
+
+    <span class="k">Dim</span> <span class="n">paramNames</span> <span class="ow">As</span> <span class="kt">Variant</span><span class="p">,</span> <span class="n">i</span> <span class="ow">As</span> <span class="kt">Integer</span>
+    <span class="n">paramNames</span> <span class="o">=</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">getParameterNames</span><span class="p">()</span>
+
+    <span class="k">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">To</span> <span class="n">Ubound</span><span class="p">(</span><span class="n">paramNames</span><span class="p">)</span> <span class="c">&#39;copy each item to the document</span>
+      <span class="k">Dim</span> <span class="n">tmpItem</span> <span class="ow">As</span> <span class="n">NotesItem</span>
+      <span class="k">Set</span> <span class="n">tmpItem</span> <span class="o">=</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">copyParameterItemToDoc</span><span class="p">(</span><span class="n">paramNames</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">doc</span><span class="p">,</span> <span class="n">paramNames</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+      <span class="k">If</span> <span class="n">Left$</span><span class="p">(</span><span class="n">paramNames</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="mi">8</span><span class="p">)</span> <span class="o">=</span> <span class="s">&quot;Authors_&quot;</span> <span class="k">Then</span> <span class="c">&#39;using a naming convention for params makes it easy to set addl properties</span>
+        <span class="n">tmpItem</span><span class="p">.</span><span class="n">IsAuthors</span> <span class="o">=</span> <span class="k">True</span>
+      <span class="k">End</span> <span class="k">If</span>
+    <span class="k">Next</span>
+
+    <span class="k">Call</span> <span class="n">doc</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">True</span><span class="p">,</span> <span class="k">False</span><span class="p">)</span>
+
+    <span class="k">Call</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">logMessage</span><span class="p">(</span><span class="s">&quot;Successfully updated configuration document&quot;</span><span class="p">)</span>
+
+    <span class="k">Call</span> <span class="n">TSAgentParameters</span><span class="p">.</span><span class="n">markComplete</span><span class="p">()</span>      
+  <span class="k">End</span> <span class="k">If</span>
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../refresh/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Refresh/Replace Design" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Refresh/Replace Design
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../runcommand/" class="md-footer__link md-footer__link--next" aria-label="Next: Run Command" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Run Command
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.29db7785.min.js"></script>
+      
+    
+  </body>
+</html>
