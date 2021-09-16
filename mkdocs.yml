@@ -1,0 +1,67 @@
+site_name: Teamstudio Build Manager 9.0
+
+nav:
+  - 'index.md'
+  - 'intro.md'
+  - 'Installation and Setup' :
+    - 'installdb.md'
+    - 'installplugin.md'
+    - 'installtr.md'
+    - 'installwa.md'
+    - 'Stored Resources' :
+      - 'srintro.md'
+      - 'srpaths.md'
+      - 'sraclentry.md'
+      - 'sracl.md'
+      - 'srids.md'
+      - 'srnetwork.md'
+      - 'srserver.md'
+      - 'srtr.md'
+  - 'Promotion Paths' :
+    - 'promotion.md'
+    - 'ppcreate.md'
+    - 'bpcreate.md'
+    - 'projectbuild.md'
+    - 'ciaoconfig.md'
+    - 'tracking.md'
+    - 'automating.md'
+  - 'Build Steps' :
+    - 'buildsteps.md'
+    - 'acl.md'
+    - 'approval.md'
+    - 'compile.md'
+    - 'testdata.md'
+    - 'customstep.md'
+    - 'dbcopy.md'
+    - 'dbprops.md'
+    - 'audit.md'
+    - 'elemprops.md'
+    - 'email.md'
+    - 'enableagents.md'
+    - 'version.md'
+    - 'modify.md'
+    - 'refresh.md'
+    - 'runagent.md'
+    - 'runcommand.md'
+    - 'star.md'
+    - 'console.md'
+    - 'behalf.md'
+    - 'agentserver.md'
+    - 'signdb.md'
+    - 'switchid.md'
+  - 'Troubleshooting' :
+    - 'troubleshooting.md'
+    - 'errors.md'
+  - 'release.md'
+
+theme:
+  name: material
+      
+markdown_extensions:
+  - admonition
+  - md_in_html
+  - pymdownx.highlight
+  - pymdownx.superfences
+  
+plugins:
+  - search
