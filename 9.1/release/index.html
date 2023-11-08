@@ -13,7 +13,7 @@
     
     
       
-        <title>Release Notes - Teamstudio Build Manager 9.0</title>
+        <title>Release Notes - Teamstudio Build Manager 9.1</title>
       
     
     
@@ -72,7 +72,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Teamstudio Build Manager 9.0" class="md-header__button md-logo" aria-label="Teamstudio Build Manager 9.0" data-md-component="logo">
+    <a href=".." title="Teamstudio Build Manager 9.1" class="md-header__button md-logo" aria-label="Teamstudio Build Manager 9.1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -85,7 +85,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Teamstudio Build Manager 9.0
+            Teamstudio Build Manager 9.1
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -158,13 +158,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Teamstudio Build Manager 9.0" class="md-nav__button md-logo" aria-label="Teamstudio Build Manager 9.0" data-md-component="logo">
+    <a href=".." title="Teamstudio Build Manager 9.1" class="md-nav__button md-logo" aria-label="Teamstudio Build Manager 9.1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    Teamstudio Build Manager 9.0
+    Teamstudio Build Manager 9.1
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1041,15 +1041,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#901" class="md-nav__link">
-    9.0.1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#900" class="md-nav__link">
-    9.0.0
+  <a href="#910" class="md-nav__link">
+    9.1.0
   </a>
   
 </li>
@@ -1109,15 +1102,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#901" class="md-nav__link">
-    9.0.1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#900" class="md-nav__link">
-    9.0.0
+  <a href="#910" class="md-nav__link">
+    9.1.0
   </a>
   
 </li>
@@ -1141,48 +1127,20 @@
                 
 
 <h1 id="release-notes">Release Notes</h1>
-<p>Build Manager 9.0.1 is a fix release of Build Manager 9.0.  See the Fix Lists section below for specific details.</p>
-<p>The Build Manager 9.0 release focuses on three specific enhancements:  a new Build Automation / Command-Line interface for running promotions, significant improvements to the Design Refresh / Design Replace steps, and a refreshed UI design.</p>
-<ul>
-<li><strong>Command-Line Promotions</strong> The executable included with Build Manager, TeamstudioBuildManager.exe, can now be used to run promotions.  Promotions can be automated and triggered by external applications such as Continuous Integration servers and Deployment Management software, allowing integration with builds for related projects via technologies like ANT and Jenkins.  External programs can capture the output of the Build Manager promotion log, and determine the status of the promotion via the command's exit code.  For more information, see <a href="../automating/">Automating Promotions using the Build Manager Executable</a>.</li>
-<li><strong>Design Refresh Improvements</strong> Build Manager now provides more information about the Design Refresh process, including verifying that the newly promoted template has the expected template name prior to beginning a refresh, reporting on template name conflicts, and preventing refresh/replace attempts when the template name is not set on the promoted template.  The Design Refresh option has also been updated with options to bring it more in line with the design replace the behavior of the Notes client; it can now be set to leave the new template name in the target database, and it does not mandate the deletion of the design elements in the target before the replace.</li>
-<li><strong>Updated UI Design</strong> The look and feel of the Build Manager suite of databases has been updated, including new logos and a more modern color scheme.  Dynamic Help (F1 or Help &gt; Dynamic Help) now links to sections of this documentation.</li>
-</ul>
+<p>Build Manager 9.1 is a feature release of Build Manager adding support for 64 bit Notes clients. On 64 bit clients, the Build Manager utility executable is now named <em>TeamstudioBuildManager64.exe</em> rather than <em>TeamstudioBuildManager.exe</em>. Build Manager will detect whether it is running on a 64 or 32 bit client and install the correct executable automatically.</p>
+<p>From this release onwards, the LotusScript source code for Build Manager is no longer hidden. There are no changes to the licensing terms, but we hope that being able to read the code will help with making the best use of Build Manager in your environment.</p>
 <h2 id="upgrading">Upgrading</h2>
 <p>To upgrade the Build Manager NSF, sign the template with an ID with appropriate rights, and refresh the design of the Build Manager application. Do the same for Template Registry and Approvals workflow application, if applicable.</p>
-<p>To upgrade the Status Plugin, open the updated Build Manager NSF, and choose <em>Actions|2. Install Status Plugin</em>. Accept the prompt to allow the installation, and to restart Notes when the installation is complete. This action must be performed on each workstation used to run Build Manager promotions if the workstation is configured to use the Status Plugin.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If the Status Plugin displays a blank screen after restart, close the tab with the Status Plugin,
-and re-open it from Build Manager via <em>Actions|1. Show Status Plugin</em>. If the plugin has installed
-correctly, it will display the Build Manager logo in the top part of the screen.</p>
-</div>
-<p>More information on installing the Status Plugin can be found <a href="../installplugin/">here</a>.</p>
-<p>If a promotion is attempted before the plugin has been upgraded on a workstation, Build Manager will prompt to install the new version of the plugin, and exit the promotion.</p>
-<p>If you previously used a workaround for issue TMS-620, you can safely remove any CIAO!, Configurator, or Analyzer DLLs copied to the Notes executable directory. Installing a new version or uninstalling and reinstalling these tools will also do this.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Please note that Build Manager 9.0 requires a valid version 9.x License Number and Key to use the product.</p>
+<p>Please note that Build Manager 9.1 requires a valid version 9.1 License Number and Key to use the product.</p>
 </div>
 <h2 id="fix-list">Fix List</h2>
-<h3 id="901">9.0.1</h3>
-<p>[TMS-1366] - Allow blank target file name in Promotion Paths<br />
-[TMS-1291] - Fix error when clicking Refresh Agents button on Agent steps if the source is a Template Registry<br />
-[TMS-1292] - Fix issue where installation check can fail and continue prompting to install<br />
-[TMS-1293] - Shell Command step now closes the target DB handle to allow external programs to act on the new template  </p>
-<h3 id="900">9.0.0</h3>
-<p>[TMS-390] - Add Template Registry 'Deployment Tracking' to Standard Paths<br />
-[TMS-417] - Create Test Data step for Domino source fails due to erroneous validation if Network Share field is blank<br />
-[TMS-1098] - Allow use of Notes' built-in column icons (specified by number) in Custom Actions<br />
-[TMS-1200] - Prevent the setting of DB Titles that include new-line characters, which can cause database issues<br />
-[TMS-1240] - Hide 'Load From' option on new Stored ID documents<br />
-[TMS-1256] - Fix issue where Template Registry Change report can contain unrelated results under certain circumstances<br />
-[TMS-1262] - Add command-line promotion function to allow integration with build and deployment systems<br />
-[TMS-1267] - Fix issue where pending Workflow Approvals can inadvertently authorize sibling Promotion Paths in some situations<br />
-[TMS-1278] - Log information about other files using the same template name, when the template name cannot be set during the promotion<br />
-[TMS-1279] - Do not allow design refresh/replace if the template name isn't set on the promoted template<br />
-[TMS-1280] - Add options to the Design Replace step to more closely reproduce the Notes Client's Design Replace behavior<br />
-[TMS-1282] - Fix issue with Notes 10 Action Bars displaying broken gradient overlays</p>
+<h3 id="910">9.1.0</h3>
+<p>[186245437] Dialog for adding standard paths is empty on Notes 12.0.2+<br />
+[186276395] Update help links to use the new help site<br />
+[186284271] Fix "Registry Target Servers Lookup Failed" error<br />
+[186436098] Update TeamstudioBuildManager.exe and LotusScript DLL calls to 64 bit</p>
 
               
             </article>

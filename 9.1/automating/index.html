@@ -13,7 +13,7 @@
     
     
       
-        <title>Automating Promotions - Teamstudio Build Manager 9.0</title>
+        <title>Automating Promotions - Teamstudio Build Manager 9.1</title>
       
     
     
@@ -72,7 +72,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Teamstudio Build Manager 9.0" class="md-header__button md-logo" aria-label="Teamstudio Build Manager 9.0" data-md-component="logo">
+    <a href=".." title="Teamstudio Build Manager 9.1" class="md-header__button md-logo" aria-label="Teamstudio Build Manager 9.1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -85,7 +85,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Teamstudio Build Manager 9.0
+            Teamstudio Build Manager 9.1
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -158,13 +158,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Teamstudio Build Manager 9.0" class="md-nav__button md-logo" aria-label="Teamstudio Build Manager 9.0" data-md-component="logo">
+    <a href=".." title="Teamstudio Build Manager 9.1" class="md-nav__button md-logo" aria-label="Teamstudio Build Manager 9.1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    Teamstudio Build Manager 9.0
+    Teamstudio Build Manager 9.1
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1200,6 +1200,10 @@
 
 <h1 id="automating-promotions">Automating Promotions</h1>
 <p>Version 9.0 and later of Teamstudio Build Manager support running Promotions via the command-line using TeamstudioBuildManager.exe. The executable uses its return value to indicate the status of the promotion, and accepts parameters to control logging, providing an easy way to integrate Build Manager to build and deploy code as part of larger projects that employ build tools such as ANT or Continuous Integration build tools.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In 64 bit client environemnts, the executable is named <em>TeamstudioBuildManager64.exe</em> rather than <em>TeamstudioBuildManager.exe</em>. All of the references in these instructions should be modified as appropriate.</p>
+</div>
 <h2 id="using-the-executable">Using the Executable</h2>
 <p>TeamstudioBuildManager.exe is installed in the Notes executable directory when a Notes client is first used to run a promotion. It can also be detached from the Page design element <em>(BMSupportingFiles)</em> in the Build Manager NTF. The executable must be run from the Notes executable directory of a Notes client installation on Windows.</p>
 <p>Running the executable without any arguments will display usage information, including the parameters that can be specified.</p>
