@@ -2,6 +2,9 @@
 
 Version 9.0 and later of Teamstudio Build Manager support running Promotions via the command-line using TeamstudioBuildManager.exe. The executable uses its return value to indicate the status of the promotion, and accepts parameters to control logging, providing an easy way to integrate Build Manager to build and deploy code as part of larger projects that employ build tools such as ANT or Continuous Integration build tools.
 
+!!! note
+    In 64 bit client environemnts, the executable is named *TeamstudioBuildManager64.exe* rather than *TeamstudioBuildManager.exe*. All of the references in these instructions should be modified as appropriate.
+
 ## Using the Executable
 TeamstudioBuildManager.exe is installed in the Notes executable directory when a Notes client is first used to run a promotion. It can also be detached from the Page design element *(BMSupportingFiles)* in the Build Manager NTF. The executable must be run from the Notes executable directory of a Notes client installation on Windows.
 
