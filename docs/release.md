@@ -15,6 +15,12 @@ To upgrade the Build Manager NSF, sign the template with an ID with appropriate 
     Please note that Build Manager 9.1 requires a valid version 9.1 License Number and Key to use the product.
     
 ## Fix List
+### 9.1.1
+[188122956]	Promotions from Template Registry crash on 64 bit  
+[188122946]	Promotions to Template Registry may silently fail on 64 bit  
+[188122936]	DB Properties step can fail with a message about missing "$TemplateBuild_Blank"  
+[188152283]	Fix "Type mismatch on external name" errors in bmconfig.ntf
+
 ### 9.1.0 
 
 [186245437] Dialog for adding standard paths is empty on Notes 12.0.2+  
