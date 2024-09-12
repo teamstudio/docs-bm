@@ -15,6 +15,10 @@ To upgrade the Build Manager NSF, sign the template with an ID with appropriate 
     Please note that Build Manager 9.1 requires a valid version 9.1 License Number and Key to use the product.
     
 ## Fix List
+### 9.1.2
+[188260053] Signing step crashes or errors on 64 bit   
+[188261244] Error displaying stored templates in Template Registry
+
 ### 9.1.1
 [188122956]	Promotions from Template Registry crash on 64 bit  
 [188122946]	Promotions to Template Registry may silently fail on 64 bit  
