@@ -15,6 +15,9 @@ To upgrade the Build Manager NSF, sign the template with an ID with appropriate 
     Please note that Build Manager 9.1 requires a valid version 9.1 License Number and Key to use the product.
     
 ## Fix List
+### 9.1.3
+[41] Fix 'External function not found' error when switching ID
+
 ### 9.1.2
 [188260053] Signing step crashes or errors on 64 bit   
 [188261244] Error displaying stored templates in Template Registry
@@ -22,14 +25,14 @@ To upgrade the Build Manager NSF, sign the template with an ID with appropriate 
 ### 9.1.1
 [188122956]	Promotions from Template Registry crash on 64 bit  
 [188122946]	Promotions to Template Registry may silently fail on 64 bit  
-[188122936]	DB Properties step can fail with a message about missing "$TemplateBuild_Blank"  
-[188152283]	Fix "Type mismatch on external name" errors in bmconfig.ntf
+[188122936]	DB Properties step can fail with a message about missing '$TemplateBuild_Blank'  
+[188152283]	Fix 'Type mismatch on external name' errors in bmconfig.ntf
 
 ### 9.1.0 
 
 [186245437] Dialog for adding standard paths is empty on Notes 12.0.2+  
 [186276395] Update help links to use the new help site  
-[186284271] Fix "Registry Target Servers Lookup Failed" error  
+[186284271] Fix 'Registry Target Servers Lookup Failed' error  
 [186436098] Update TeamstudioBuildManager.exe and LotusScript DLL calls to 64 bit  
 [186633171] Fix 'Create Switch ID' action to launch the correct form  
 [187147388] Disable Test Data step on 64 bit
